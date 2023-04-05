@@ -12,8 +12,8 @@ export default function FetchData({cat}) {
         await axios                            // here we are fetching the data from api...
         .get(
             cat 
-            ? 'https://newsapi.org/v2/top-headlines?country=in&category=${cat}&apiKey=d11cf7e2c71d42178caa38289713b11b'
-            : 'https://newsapi.org/v2/top-headlines?country=in&apiKey=d11cf7e2c71d42178caa38289713b11b'
+            ? `https://newsapi.org/v2/top-headlines?country=in&category=${cat}&apiKey=d11cf7e2c71d42178caa38289713b11b`
+            : `https://newsapi.org/v2/top-headlines?country=in&apiKey=d11cf7e2c71d42178caa38289713b11b`
 
         )
 
@@ -26,7 +26,7 @@ export default function FetchData({cat}) {
 
         fetchData();
                         // it will change the effects in fuction if there is anu change at external side...
-    },[cat]);
+    });
 
 
   return (
@@ -49,7 +49,7 @@ export default function FetchData({cat}) {
                         
                         <p className='py-2'>{items.content}</p>
 
-                        <Link to={items.url} target="_blank">View More</Link>
+                        <button style={{borderRadius:"5px",marginBottom:"10px",backgroundColor:"white"}}><Link to={items.url} target="_blank" style={{textDecoration:"none"}}>View More</Link></button>
                     </div> 
                     
                     </>
