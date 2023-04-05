@@ -24,8 +24,7 @@ export default function FetchData({cat}) {
     
     useEffect(() => {
 
-        fetchData();
-                        // it will change the effects in fuction if there is anu change at external side...
+        fetchData();        // it will change the effects in fuction if there is anu change at external side...
     });
 
 
