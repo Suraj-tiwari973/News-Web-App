@@ -30,13 +30,13 @@ export default function FetchData({cat}) {
 
   return (
     <div className='container-fluid' style={{backgroundColor:"black",color:"white"}}>
-        <h3 className='py-4 d-flex justify-content-center align-items-center'><u>TOP HEADLINES</u></h3>
+        <h3 className='text-center p-4'><u>TOP HEADLINES</u></h3>
         <div className='container d-flex justify-content-center align-items-center flex-column' style={{minHeight:"100vh"}}>
             {
                 data ? data.map((items,index) =>(
 
                     <>                  
-                    <div className='container m-2' style={{maxWidth:"800px",boxShadow:"2px 0px 10px blue",borderRadius:"10px"}}>
+                    <div className='container my-4' style={{maxWidth:"800px",boxShadow:"2px 0px 10px blue",borderRadius:"10px"}}>
 
                         <h5 className='my-3'>{items.title}</h5>
 
@@ -48,7 +48,7 @@ export default function FetchData({cat}) {
                         
                         <p className='py-2'>{items.content}</p>
 
-                        <button style={{borderRadius:"5px",marginBottom:"10px",backgroundColor:"white"}}><Link to={items.url} target="_blank" style={{textDecoration:"none"}}>View More</Link></button>
+                        <button style={{borderRadius:"5px",marginBottom:"10px",backgroundColor:"white",width:"100%"}}><Link to={items.url} target="_blank" style={{textDecoration:"none"}}>View More</Link></button>
                     </div> 
                     
                     </>
